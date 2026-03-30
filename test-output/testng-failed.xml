@@ -4,23 +4,17 @@
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
-    <parameter name="os" value="linux"/>
+  <test thread-count="5" name="linux_Test(failed)">
+    <parameter name="os" value="windows"/>
     <parameter name="browser" value="chrome"/>
-    <groups>
-      <run>
-        <include name="Sanity"/>
-      </run>
-    </groups>
     <classes>
-      <class name="testCases.TC_01_DilAdmin_Login">
+      <class name="testCases.TC_Login">
         <methods>
           <include name="tearDown"/>
-          <include name="dilAdminLogin"/>
+          <include name="loginTestCase"/>
           <include name="setup"/>
-          <include name="practitionerLogin"/>
         </methods>
-      </class> <!-- testCases.TC_01_DilAdmin_Login -->
+      </class> <!-- testCases.TC_Login -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- linux_Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
